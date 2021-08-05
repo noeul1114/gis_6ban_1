@@ -27,7 +27,7 @@
 
             <div>
                 <a href="{% url 'articleapp:detail' pk=article.pk %}">
-                    <img src="{{ article.image.url }}" alt="">
+                    <img style="width: 280px;" src="{{ article.image.url }}" alt="">
                 </a>
                 <span class="NNS_B m-2">{{ article.title }}</span>
             </div>
@@ -37,6 +37,17 @@
     </div>
 
     <script src="{% static 'js/magicgrid.js' %}"></script>
+
+    <div class="text-center my-5">
+        <a href="{% url 'articleapp:create' %}"
+           class="btn btn-dark rounded-pill material-icons">
+            brush
+        </a>
+        <a href="{% url 'articleapp:create' %}"
+           class="btn btn-outline-dark rounded-pill px-5">
+            Create Article
+        </a>
+    </div>
 
 
 {% endblock %}
