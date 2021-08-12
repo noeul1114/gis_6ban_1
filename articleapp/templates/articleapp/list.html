@@ -4,8 +4,14 @@
 {% block content %}
 
     <style>
+        .container {
+            padding: 0;
+            margin: 0 auto;
+        }
+
         .container div {
-          width: 280px;
+          width: 45%;
+            max-width: 200px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -27,7 +33,7 @@
 
             <div>
                 <a href="{% url 'articleapp:detail' pk=article.pk %}">
-                    <img style="width: 280px;" src="{{ article.image.url }}" alt="">
+                    <img src="{{ article.image.url }}" alt="">
                 </a>
                 <span class="NNS_B m-2">{{ article.title }}</span>
             </div>
