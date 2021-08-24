@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 
+from django.contrib.messages import constants as messages
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 from django.urls import reverse_lazy
 
@@ -42,6 +44,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
 
 # Application definition
 
