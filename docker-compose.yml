@@ -14,7 +14,7 @@ services:
       - gis_6ban_media:/data/media/
 
   django:
-    image: gis_6ban_django:4
+    image: gis_6ban_django:5
     networks:
       - gis_6ban_network
     volumes:
@@ -37,9 +37,9 @@ services:
       - MARIADB_ROOT_PASSWORD
     environment:
       MARIADB_DATABASE: django
-      MARIADB_USER: django
-      MARIADB_PASSWORD: password1234
-      MARIADB_ROOT_PASSWORD: password1234
+      MARIADB_USER_FILE: /run/secrets/MARIADB_USER
+      MARIADB_PASSWORD_FILE: /run/secrets/MARIADB_PASSWORD
+      MARIADB_ROOT_PASSWORD_FILE: /run/secrets/MARIADB_ROOT_PASSWORD
 
 
 networks:
