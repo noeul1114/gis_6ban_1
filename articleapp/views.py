@@ -63,3 +63,5 @@ class ArticleListView(ListView):
     paginate_by = 20
 
 
+def test():
+    pass
